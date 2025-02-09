@@ -1,0 +1,125 @@
+ /* Franja azul fija en la parte superior con icono Meta */
+.scroll-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #ff7418;
+    display: none;
+    z-index: 1000;
+    justify-content: space-between; /* Espaciado entre el monito y el icono de Meta */
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px; /* Espacio para el icono de Meta */
+}
+
+/* Contenedor del icono de Meta */
+.meta-icon {
+    color: white;
+    font-size: 20px; /* Ajusta el tamaño del icono Meta */
+}
+
+/* Contenedor para el segundo monito */
+.runner-container-second {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* El segundo monito corriendo usando una imagen GIF */
+.runner-icon-second {
+    position: absolute;
+    top: 10px; /* Ajustar la posición vertical */
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url('/img/running.gif');
+    background-size: cover; /* Asegurarse de que el GIF cubra todo el contenedor */
+    z-index: 1100; /* Asegurarnos de que esté por encima de la barra azul */
+    transition: transform 0.1s linear;
+}
+
+/* Animación de correr (simulación de movimiento de las piernas) */
+@keyframes run {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Aplicar la animación al monito mientras se mueve */
+.runner-icon-second.running {
+    animation: run 0.3s infinite linear; /* Ajuste de velocidad de las piernas */
+}
+
+/* Keyframes para la animación de correr */
+@keyframes run-cycle {
+    from { background-position: 0; }
+    to { background-position: -200px; }
+}
+
+/* Monito 1 (oculto) */
+.runner-icon {
+    display: none; /* Ocultar el monito 1 */
+}
+
+/* Estilos para los fuegos artificiales */
+.fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    display: none; /* Ocultos inicialmente */
+    z-index: 2000; /* Encima de todo */
+}
+
+.firework {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffcc00;
+    animation: explode 1s ease-out forwards; /* Cada explosión dura 1 segundo */
+}
+
+/* Tres explosiones con diferentes retrasos */
+.firework:nth-child(1) {
+    animation-delay: 0s; /* Primera explosión */
+}
+
+.firework:nth-child(2) {
+    animation-delay: 2s; /* Segunda explosión, retraso de 1 segundo */
+}
+
+.firework:nth-child(3) {
+    animation-delay: 3s; /* Tercera explosión, retraso de 2 segundos */
+}
+
+/* Keyframes para la animación de explosión */
+@keyframes explode {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(10);
+    }
+}
+
+/* Diferentes colores de fuegos artificiales */
+.firework-red {
+    background-color: #6983e9;
+}
+
+.firework-blue {
+    background-color: #ff8000;
+}
+
+.firework-green {
+    background-color: #ffffff;
+}

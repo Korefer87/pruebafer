@@ -1,0 +1,52 @@
+/* Notificación de reserva estilo burbuja */
+.reservation-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    visibility: hidden; /* Ocultar inicialmente */
+    opacity: 0; /* Opacidad 0 inicialmente */
+    transition: opacity 0.5s ease-out, visibility 0s linear 0.5s; /* Transición de opacidad */
+}
+
+/* Animación de aparición */
+.reservation-notification.show {
+    visibility: visible; /* Mostrar cuando se agrega la clase 'show' */
+    opacity: 1; /* Opacidad 1 cuando se muestra */
+    transition-delay: 0s; /* Quitar retraso de visibilidad cuando se muestra */
+}
+
+/* Estilo para la bandera */
+.flag {
+    margin-right: 10px;
+}
+
+.flag img {
+    width: 20px;
+    height: 14px;
+    object-fit: contain;
+}
+
+/* Estilo para el botón de cierre */
+.close-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-btn:hover {
+    color: #000;
+}

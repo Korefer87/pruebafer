@@ -1,0 +1,67 @@
+/* Estilo para el modal */
+.modal {
+    display: none; /* Oculto inicialmente */
+    position: fixed;
+    z-index: 5000; /* Asegurarse de que esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro transparente */
+    justify-content: flex-start; /* Alinear el modal al inicio */
+    align-items: flex-start; /* Alinear el modal al inicio */
+}
+
+/* Contenedor del contenido del modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    transform-origin: top right; /* Punto de origen de la animación en la esquina superior derecha */
+    margin: 0; /* Quitar márgenes */
+}
+
+/* Animación personalizada */
+@keyframes pipeEffect {
+    0% {
+        transform: scale(0); /* Comienza desde un punto pequeño */
+        opacity: 0; /* Totalmente transparente */
+        top: 0;
+        right: 0;
+    }
+    50% {
+        transform: scale(0.5); /* Crece a la mitad de su tamaño */
+        opacity: 1; /* Empieza a aparecer */
+    }
+    100% {
+        transform: scale(1); /* Toma su tamaño completo */
+        opacity: 1; /* Totalmente visible */
+    }
+}
+
+/* Botón de cierre */
+.modal-close {
+    position: absolute;
+    top: 0.5px;
+    right: 5px;
+    font-size: 25px;
+    color: #474747;
+    cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para la imagen dentro del modal */
+.modal img {
+    max-width: 100%;
+    height: auto;
+}

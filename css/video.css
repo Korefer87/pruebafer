@@ -1,0 +1,61 @@
+.explore-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.3rem;
+    color: #ccc;
+}
+
+.explore-description {
+    color: #bbb;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.video-section-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.activity-description {
+    background-color: #1e2847;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.video-description {
+    color: #ffffff;
+}
+
+.nav-pills {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Separación entre los botones */
+}
+
+.nav-pills .nav-item {
+    flex: 1; /* Asegura que todos los botones tengan el mismo ancho */
+}
+
+.nav-pills .nav-link {
+    background-color: #184eff;
+    color: white;
+    border-radius: 30px;
+    padding: 8px 15px; /* Tamaño más pequeño */
+    font-size: 0.8rem; /* Tamaño de texto más pequeño */
+    text-align: center;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #153dcc;
+}
+
+.tab-content {
+    margin-top: 2rem;
+}
+
+.btn-small {
+    width: 100%;
+}

@@ -1,0 +1,140 @@
+#tequila-countdown {
+    position: fixed;
+    top: 720px;
+    left: 10px;
+    background-color: #184eff;
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100px;
+    height: 35px;
+}
+
+#countdown-time {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#tequila-text {
+    position: fixed;
+    top: 740px;
+    left: 19px;
+    font-size: 8px;
+    color: white;
+    background-color: transparent;
+    z-index: 1200;
+    font-weight: normal;
+}
+
+#tequila-mask {
+    position: fixed;
+    top: 115px; /* Cubrir tanto el texto como el contador */
+    left: 10px;
+    width: 110px;
+    height: 50px;
+    z-index: 1200; /* Un z-index superior para estar encima de otros elementos */
+    cursor: pointer;
+}
+
+
+/* Estilos para pantallas grandes: hacer que el contador sea vertical */
+@media (min-width: 992px) {
+    #tequila-countdown {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        background-color: #184eff;
+        color: white;
+        padding: 10px;
+        border-radius: 0 15px 15px 0; /* Bordes redondeados solo en la derecha */
+        font-size: 12px;
+        font-weight: bold;
+        z-index: 1100;
+        text-align: center;
+        width: 60px; /* Ajustar para el texto y el contador */
+        height: auto; /* Ajustar altura automáticamente */
+        display: flex;
+        flex-direction: column; /* Organizar los elementos de forma vertical */
+        justify-content: center; /* Centrar verticalmente */
+        align-items: center; /* Centrar horizontalmente */
+    }
+
+    /* Estilo para el texto dentro del countdown */
+    #tequila-text {
+        font-size: 8px; /* Tamaño de texto pequeño para ajustarse */
+        line-height: 1.2; /* Separación entre líneas */
+        margin-bottom: 10px; /* Separación entre el texto y el contador */
+        text-align: center; /* Texto centrado horizontalmente */
+    }
+
+    /* Estilo del tiempo de la cuenta regresiva */
+    #countdown-time {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* Área de clic transparente que cubre todo el countdown */
+    #tequila-mask {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        width: 70px;
+        height: 100px;
+        z-index: 1200;
+        cursor: pointer;
+        transform: translateY(-50%); /* Centrar verticalmente */
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 992px) {
+    #tequila-countdown {
+        position: fixed;
+        top: 50%; /* Centrado verticalmente */
+        left: 0; /* Pegado al margen izquierdo */
+        background-color: #184eff;
+        color: white;
+        padding: 15px;
+        border-radius: 0 15px 15px 0; /* Bordes redondeados en la esquina derecha */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+        font-weight: bold;
+        z-index: 1100;
+        text-align: center;
+        width: 80px; /* Más estrecho */
+        height: auto; /* Ajustable en altura */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #countdown-time {
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    #tequila-text {
+        font-size: 10px;
+        font-weight: normal;
+        line-height: 1.2; /* Espaciado entre líneas */
+        text-align: center;
+        margin-bottom: 80px; /* Subir el texto con un margen negativo */
+    }
+
+    #tequila-mask {
+        position: fixed;
+        top: 50%; /* Alinear con el contenedor */
+        left: 0;
+        width: 100px; /* Más estrecho */
+        height: auto; /* Ajustable */
+        z-index: 1200;
+        cursor: pointer;
+    }
+}
